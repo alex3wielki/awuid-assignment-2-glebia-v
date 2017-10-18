@@ -1,6 +1,7 @@
 body {
   background: #aaa;
   font-size: 100%;
+  font-family: Roboto, sans-serif;
 }
 
 // Cleaning bootstrap classes
@@ -9,6 +10,11 @@ body {
   margin: 0;
 }
 
+.roboto-mono {
+  font-family: "Roboto Mono", sans-serif;
+}
+
+$text-color: rgb(250, 255, 251);
 header {
   background: url("./../assets/images/spaceship-warp-drive.jpg");
   background-attachment: fixed;
@@ -16,19 +22,29 @@ header {
   height: 100vh;
   width: 100%;
   section#headers {
-    text-align: center;
     font-size: 300%;
     h1,
     h2 {
       font-family: zilap_geometrikregular, sans-serif;
-      color: rgb(250, 255, 251);
+      color: $text-color;
       text-shadow: 0 0 10px black;
     }
     h1 {
       font-size: 300%;
     }
-    h2{
+    h2 {
       font-size: 150%;
     }
+  }
+}
+
+main {
+  height: 100vh;
+  background: url("./../assets/images/spaceship-battleship-battle.jpg");
+  color: $text-color;
+  background-attachment: fixed;
+  article {
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    height: 100vh;
   }
 }
