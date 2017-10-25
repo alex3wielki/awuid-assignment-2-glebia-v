@@ -92,6 +92,7 @@ main {
 }
 
 #accordion {
+  padding-bottom: 10px;
   .card-header {
     a {
       color: silver;
@@ -99,6 +100,13 @@ main {
   }
   .card {
     background: rgba(#000000, 0.5);
+    h5 {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    p{
+      padding-top: 5px;
+    }
   }
 }
 
