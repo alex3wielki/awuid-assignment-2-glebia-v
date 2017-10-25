@@ -14,6 +14,13 @@ body {
   font-family: "Roboto Mono", sans-serif;
 }
 
+.divider {
+  height: 1px;
+  width: 80%;
+  border: 2px silver solid;
+  margin: 20px auto;
+}
+
 $text-color: rgb(250, 255, 251);
 header {
   background: url("./../assets/images/spaceship-warp-drive.jpg");
@@ -22,6 +29,14 @@ header {
   height: 100vh;
   width: 100%;
   section#headers {
+    @mixin sizingHeaders($size) {
+      h1 {
+        font-size: $size;
+      }
+      h2 {
+        font-size: $size/2;
+      }
+    }
     font-size: 300%;
     h1,
     h2 {
@@ -29,22 +44,67 @@ header {
       color: $text-color;
       text-shadow: 0 0 10px black;
     }
-    h1 {
-      font-size: 300%;
+    @media screen and (max-width: 500px) {
+      $headerFont: 120%;
+      @include sizingHeaders($headerFont);
     }
-    h2 {
-      font-size: 150%;
+    @media screen and (min-width: 500px) {
+      $headerFont: 150%;
+      @include sizingHeaders($headerFont);
+    }
+    @media screen and (min-width: 1000px) {
+      $headerFont: 200%;
+      @include sizingHeaders($headerFont);
+    }
+    @media screen and (min-width: 1400px) {
+      $headerFont: 300%;
+      @include sizingHeaders($headerFont);
     }
   }
 }
 
 main {
-  height: 100vh;
   background: url("./../assets/images/spaceship-battleship-battle.jpg");
-  color: $text-color;
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $text-color; // background-attachment: fixed;
+  height: auto;
+  img {
+    height: auto;
+    width: inherit;
+  }
+  figure {
+    @media screen and (max-width: 991px) {
+      margin: auto!important;
+    }
+  }
+  article,
+  aside {
+    background-color: rgba(#000000, 0.5);
+  }
   article {
-    background-color: rgba($color: #000000, $alpha: 0.5);
-    height: 100vh;
+    ul {
+      padding-left: 0;
+      list-style-type: none;
+    }
+  }
+}
+
+#accordion {
+  .card-header {
+    a {
+      color: silver;
+    }
+  }
+  .card {
+    background: rgba(#000000, 0.5);
+  }
+}
+
+// Just making footer look nice
+footer {
+  small {
+    padding: 10px 0;
   }
 }
