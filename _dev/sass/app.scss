@@ -21,6 +21,10 @@ body {
   margin: 20px auto;
 }
 
+.divider:first-of-type {
+  background: none;
+}
+
 $text-color: rgb(250, 255, 251);
 header {
   background: url("./../assets/images/spaceship-warp-drive.jpg");
@@ -81,7 +85,8 @@ main {
   }
   article,
   aside {
-    background-color: rgba(#000000, 0.5);
+    $transparentDarkBg: rgba(#000000, 0.5);
+    background-color: $transparentDarkBg;
   }
   article {
     ul {
@@ -104,10 +109,14 @@ main {
       padding-top: 0;
       padding-bottom: 0;
     }
-    p{
+    p {
       padding-top: 5px;
     }
   }
+}
+
+#carouselIndicators.carousel.slide {
+  width: 50%; // height: 200px;
 }
 
 // Just making footer look nice
