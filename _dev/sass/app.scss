@@ -78,6 +78,11 @@ main {
     height: auto;
     width: inherit;
   }
+  // .importImg{
+  //   @media screen and (max-width: 300px) {
+  //     width: 100%;
+  //   }
+  // }
   figure {
     @media screen and (max-width: 991px) {
       margin: auto!important;
